@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SmartBus AI Coimbatore</title>
+    <!-- Use FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --tn-blue: #0d1b42; 
+            --tn-light-blue: #e8f0fe;
+            --bg-gray: #f2f2f2;
+            --text-dark: #333;
+            --text-gray: #777;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #e0e0e0; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Mobile App Container */
+        .app-container {
+            width: 100%;
+            max-width: 414px; 
+            background-color: var(--bg-gray);
+            min-height: 100vh;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            overflow-x: hidden;
+        }
+
+        /* Top Blue Header */
+        .app-header {
+            background-color: var(--tn-blue);
+            color: white;
+            padding: 15px 20px 40px 20px; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .header-title {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Search Card */
+        .search-card {
+            background: white;
+            margin: -25px 15px 15px 15px;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            position: relative;
+            z-index: 10;
+        }
+
+        .input-wrapper {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--tn-blue);
+            font-size: 14px;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px 12px 12px 40px;
+            border: 1px solid #ddd;
+            border-radius: 25px; 
+            font-size: 14px;
+            color: var(--text-dark);
+            appearance: none;
+            background-color: white;
+            outline: none;
+            font-weight: 600;
+        }
+        
+        select:focus {
+            border-color: var(--tn-blue);
+        }
+
+        /* Connection line between From and To */
+        .route-line {
+            position: absolute;
+            left: 21px;
+            top: 35px;
+            bottom: -5px;
+            width: 2px;
+            background-color: #ddd;
+            z-index: 1;
+        }
+
+        /* Swap Icon */
+        .swap-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-gray);
+            font-size: 12px;
+            z-index: 2;
+        }
+
+        /* Search Button */
+        .search-btn {
+            background-color: var(--tn-blue);
+            color: white;
+            width: calc(100% - 60px);
+            margin: 10px 30px 0 30px;
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            font-size: 15px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(13, 27, 66, 0.3);
+        }
+
+        /* Disclaimer Box */
+        .disclaimer-box {
+            margin-top: 20px;
+            background-color: #fff8e1;
+            border: 1px solid #ffe082;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 10px;
+            color: #d35400;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        /* Results Section */
+        #results-container {
+            display: none;
+            padding: 0 15px 20px 15px;
+        }
+
+        .section-title {
+            font-size: 12px;
+            color: var(--text-gray);
+            margin: 20px 0 10px 5px;
+            font-weight: 600;
+        }
+
+        .metric-banner {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 15px;
+        }
+
+        .metric-item {
+            text-align: center;
+        }
+
+        .metric-val {
+            color: var(--tn-blue);
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .metric-lbl {
+            font-size: 10px;
+            color: var(--text-gray);
+            text-transform: uppercase;
+            margin-top: 3px;
+        }
+
+        /* Route Timeline */
+        .route-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .stop-item {
+            display: flex;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .stop-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .stop-item::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 20px;
+            bottom: -25px;
+            width: 2px;
+            background-color: #27ae60;
+        }
+
+        .stop-item:last-child::before {
+            display: none;
+        }
+
+        .stop-dot {
+            width: 12px;
+            height: 12px;
+            border: 2px solid #27ae60;
+            background: white;
+            border-radius: 50%;
+            margin-top: 3px;
+            margin-right: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stop-item:last-child .stop-dot {
+            border-color: #e74c3c;
+        }
+
+        .stop-details h4 {
+            margin: 0 0 3px 0;
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+
+        .stop-details p {
+            margin: 0;
+            font-size: 12px;
+            color: var(--text-gray);
+        }
+        
+        .bus-tag {
+            display: inline-block;
+            background: var(--tn-light-blue);
+            color: var(--tn-blue);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .error-msg {
+            color: #e74c3c;
+            font-size: 13px;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <!-- Top Header -->
+    <div class="app-header">
+        <div class="header-title">
+            <i class="fa-solid fa-bars"></i>
+            WHAT'S YOUR DESTINATION?
+        </div>
+        <i class="fa-regular fa-bell"></i>
+    </div>
+
+    <!-- Search Card -->
+    <div class="search-card">
+        <div class="input-wrapper">
+            <i class="fa-solid fa-location-dot input-icon"></i>
+            <select disabled>
+                <option>COIMBATORE DISTRICT</option>
+            </select>
+        </div>
+
+        <div style="position: relative;">
+            <div class="route-line"></div>
+            
+            <div class="input-wrapper">
+                <i class="fa-solid fa-circle-arrow-up input-icon"></i>
+                <select id="from_stop">
+                    {% for stop in stops %}
+                    <option value="{{ stop }}">{{ stop }}</option>
+                    {% endfor %}
+                </select>
+                <div class="swap-icon"><i class="fa-solid fa-arrow-down-up-across-line"></i></div>
+            </div>
+
+            <div class="input-wrapper">
+                <i class="fa-solid fa-circle-arrow-down input-icon" style="color: #e74c3c;"></i>
+                <select id="to_stop">
+                    {% for stop in stops %}
+                    <option value="{{ stop }}">{{ stop }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <button class="search-btn" onclick="planJourney()">
+            Search Bus <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <div id="error-msg" class="error-msg"></div>
+
+        <!-- Project Disclaimer -->
+        <div class="disclaimer-box">
+            <i class="fa-solid fa-triangle-exclamation"></i> <b>Disclaimer:</b> This is a portfolio project built with <b>synthetic (dummy) data</b>. Bus routes, stops, locations, and time predictions do not reflect real-world Coimbatore transit data and may be inaccurate.
+        </div>
+    </div>
+
+    <!-- Results Area -->
+    <div id="results-container">
+        <div class="section-title">JOURNEY DETAILS</div>
+        
+        <!-- Metrics -->
+        <div class="metric-banner">
+            <div class="metric-item">
+                <div class="metric-val" id="ai-time">0m</div>
+                <div class="metric-lbl">Est. Time</div>
+            </div>
+            <div class="metric-item">
+                <div class="metric-val" id="total-dist">0 km</div>
+                <div class="metric-lbl">Distance</div>
+            </div>
+            <div class="metric-item">
+                <div class="metric-val" id="traffic-cond" style="color: #f39c12;">Moderate</div>
+                <div class="metric-lbl">Traffic</div>
+            </div>
+        </div>
+
+        <!-- Route Timeline -->
+        <div class="section-title">ROUTE MAP</div>
+        <div class="route-card" id="timeline-container">
+            <!-- JS will inject stops here -->
+        </div>
+    </div>
+</div>
+
+<script>
+    async function planJourney() {
+        const fromStop = document.getElementById('from_stop').value;
+        const toStop = document.getElementById('to_stop').value;
+        const errorMsg = document.getElementById('error-msg');
+        const resultsDiv = document.getElementById('results-container');
+
+        errorMsg.innerHTML = '';
+        resultsDiv.style.display = 'none';
+
+        const response = await fetch('/api/plan_journey', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ from_stop: fromStop, to_stop: toStop })
+        });
+
+        const data = await response.json();
+
+        if (data.error) {
+            errorMsg.innerHTML = data.error;
+            return;
+        }
+
+        // Update Metrics
+        document.getElementById('ai-time').innerText = data.estimated_time_mins + " mins";
+        document.getElementById('total-dist').innerText = data.distance_km + " km";
+        
+        const trafficEl = document.getElementById('traffic-cond');
+        trafficEl.innerText = data.traffic_condition;
+        trafficEl.style.color = data.traffic_condition === 'Heavy' ? '#e74c3c' : '#27ae60';
+
+        // Build Timeline
+        let timelineHTML = '';
+        data.steps.forEach(step => {
+            timelineHTML += `
+                <div class="stop-item">
+                    <div class="stop-dot"></div>
+                    <div class="stop-details">
+                        <h4>${step.stop_name}</h4>
+                        <div class="bus-tag"><i class="fa-solid fa-bus"></i> Bus No: ${step.bus}</div>
+                        <p>Boarding point</p>
+                    </div>
+                </div>
+            `;
+        });
+        
+        // Final Stop
+        timelineHTML += `
+            <div class="stop-item">
+                <div class="stop-dot"></div>
+                <div class="stop-details">
+                    <h4>${data.final_stop}</h4>
+                    <p style="color: #e74c3c; font-weight: 600;">Destination</p>
+                </div>
+            </div>
+        `;
+
+        document.getElementById('timeline-container').innerHTML = timelineHTML;
+        resultsDiv.style.display = 'block';
+    }
+
+    // Set default destination to last item
+    window.onload = function() {
+        const toSelect = document.getElementById('to_stop');
+        toSelect.selectedIndex = toSelect.options.length - 1;
+    }
+</script>
+
+</body>
+</html>

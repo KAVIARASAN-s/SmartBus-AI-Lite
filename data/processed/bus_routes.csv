@@ -1,0 +1,101 @@
+route_id,bus_number,route_name,origin_stop_id,destination_stop_id,origin,destination,service_type,route_distance_km,data_type
+R001,2,Hope College - Town Hall,S011,S003,Hope College,Town Hall,express,12.22,synthetic
+R002,2A,Ramanathapuram - Coimbatore Stop 248,S013,S248,Ramanathapuram,Coimbatore Stop 248,express,22.37,synthetic
+R003,31C,Gandhipuram - Coimbatore Stop 086,S001,S086,Gandhipuram,Coimbatore Stop 086,ordinary,18.5,synthetic
+R004,20A,RS Puram - Ganapathy,S006,S012,RS Puram,Ganapathy,limited_stop,21.58,synthetic
+R005,24C,Hope College - Coimbatore Stop 073,S011,S073,Hope College,Coimbatore Stop 073,ordinary,23.92,synthetic
+R006,60C,Ramanathapuram - Vadavalli,S013,S008,Ramanathapuram,Vadavalli,express,11.88,synthetic
+R007,5,Race Course - Ukkadam,S009,S002,Race Course,Ukkadam,ordinary,13.4,synthetic
+R008,31C,Peelamedu - Coimbatore Stop 163,S005,S163,Peelamedu,Coimbatore Stop 163,express,15.08,synthetic
+R009,12C,Hope College - Coimbatore Stop 067,S011,S067,Hope College,Coimbatore Stop 067,express,13.84,synthetic
+R010,70,Peelamedu - Gandhipuram,S005,S001,Peelamedu,Gandhipuram,limited_stop,15.6,synthetic
+R011,31,RS Puram - Coimbatore Stop 073,S006,S073,RS Puram,Coimbatore Stop 073,ordinary,23.7,synthetic
+R012,12B,Peelamedu - Coimbatore Stop 170,S005,S170,Peelamedu,Coimbatore Stop 170,ordinary,8.98,synthetic
+R013,5A,Airport - Town Hall,S010,S003,Airport,Town Hall,ordinary,25.1,synthetic
+R014,20C,Airport - Race Course,S010,S009,Airport,Race Course,ordinary,15.81,synthetic
+R015,12A,Town Hall - Coimbatore Stop 149,S003,S149,Town Hall,Coimbatore Stop 149,express,20.74,synthetic
+R016,16A,Airport - Singanallur,S010,S004,Airport,Singanallur,ordinary,17.72,synthetic
+R017,16,Ukkadam - Coimbatore Stop 097,S002,S097,Ukkadam,Coimbatore Stop 097,ordinary,12.8,synthetic
+R018,31,Ganapathy - Coimbatore Stop 231,S012,S231,Ganapathy,Coimbatore Stop 231,ordinary,22.06,synthetic
+R019,60A,Ganapathy - Singanallur,S012,S004,Ganapathy,Singanallur,ordinary,21.7,synthetic
+R020,12C,Ramanathapuram - Coimbatore Stop 215,S013,S215,Ramanathapuram,Coimbatore Stop 215,express,14.64,synthetic
+R021,5C,Ganapathy - Coimbatore Stop 193,S012,S193,Ganapathy,Coimbatore Stop 193,ordinary,5.53,synthetic
+R022,3C,Ramanathapuram - Peelamedu,S013,S005,Ramanathapuram,Peelamedu,ordinary,23.34,synthetic
+R023,12B,RS Puram - Coimbatore Stop 061,S006,S061,RS Puram,Coimbatore Stop 061,express,15.61,synthetic
+R024,7C,Singanallur - Coimbatore Stop 023,S004,S023,Singanallur,Coimbatore Stop 023,limited_stop,8.38,synthetic
+R025,45C,Airport - Ukkadam,S010,S002,Airport,Ukkadam,ordinary,20.03,synthetic
+R026,5B,Peelamedu - Vadavalli,S005,S008,Peelamedu,Vadavalli,ordinary,20.56,synthetic
+R027,1,Saibaba Colony - Coimbatore Stop 104,S007,S104,Saibaba Colony,Coimbatore Stop 104,limited_stop,12.37,synthetic
+R028,10,Airport - Saibaba Colony,S010,S007,Airport,Saibaba Colony,ordinary,27.92,synthetic
+R029,24C,Saibaba Colony - Coimbatore Stop 231,S007,S231,Saibaba Colony,Coimbatore Stop 231,limited_stop,14.92,synthetic
+R030,70A,Peelamedu - Coimbatore Stop 194,S005,S194,Peelamedu,Coimbatore Stop 194,ordinary,6.21,synthetic
+R031,20,RS Puram - Ukkadam,S006,S002,RS Puram,Ukkadam,ordinary,22.82,synthetic
+R032,2,Saibaba Colony - Coimbatore Stop 061,S007,S061,Saibaba Colony,Coimbatore Stop 061,limited_stop,24.27,synthetic
+R033,70A,Hope College - Coimbatore Stop 035,S011,S035,Hope College,Coimbatore Stop 035,express,25.04,synthetic
+R034,2A,Ganapathy - RS Puram,S012,S006,Ganapathy,RS Puram,limited_stop,6.45,synthetic
+R035,24,Ukkadam - Coimbatore Stop 245,S002,S245,Ukkadam,Coimbatore Stop 245,limited_stop,15.26,synthetic
+R036,2C,Hope College - Coimbatore Stop 190,S011,S190,Hope College,Coimbatore Stop 190,limited_stop,9.2,synthetic
+R037,24B,Ukkadam - Gandhipuram,S002,S001,Ukkadam,Gandhipuram,express,23.91,synthetic
+R038,5B,Peelamedu - Coimbatore Stop 130,S005,S130,Peelamedu,Coimbatore Stop 130,ordinary,8.55,synthetic
+R039,7C,Ramanathapuram - Coimbatore Stop 118,S013,S118,Ramanathapuram,Coimbatore Stop 118,ordinary,10.54,synthetic
+R040,31B,RS Puram - Ramanathapuram,S006,S013,RS Puram,Ramanathapuram,express,25.08,synthetic
+R041,10,Airport - Coimbatore Stop 240,S010,S240,Airport,Coimbatore Stop 240,ordinary,27.18,synthetic
+R042,16,Singanallur - Coimbatore Stop 137,S004,S137,Singanallur,Coimbatore Stop 137,ordinary,16.03,synthetic
+R043,20A,Town Hall - Town Hall,S003,S003,Town Hall,Town Hall,limited_stop,24.47,synthetic
+R044,7A,Ganapathy - Coimbatore Stop 128,S012,S128,Ganapathy,Coimbatore Stop 128,express,16.57,synthetic
+R045,2A,Town Hall - Coimbatore Stop 145,S003,S145,Town Hall,Coimbatore Stop 145,express,20.15,synthetic
+R046,7A,Saibaba Colony - Race Course,S007,S009,Saibaba Colony,Race Course,express,9.64,synthetic
+R047,70B,Saibaba Colony - Coimbatore Stop 129,S007,S129,Saibaba Colony,Coimbatore Stop 129,limited_stop,12.59,synthetic
+R048,60,Ganapathy - Perur,S012,S019,Ganapathy,Perur,limited_stop,15.87,synthetic
+R049,70B,Saibaba Colony - Ramanathapuram,S007,S013,Saibaba Colony,Ramanathapuram,limited_stop,8.85,synthetic
+R050,2A,Airport - Coimbatore Stop 062,S010,S062,Airport,Coimbatore Stop 062,express,17.16,synthetic
+R051,2,Town Hall - Coimbatore Stop 157,S003,S157,Town Hall,Coimbatore Stop 157,limited_stop,24.56,synthetic
+R052,20A,Airport - RS Puram,S010,S006,Airport,RS Puram,express,15.19,synthetic
+R053,7A,Ganapathy - Coimbatore Stop 050,S012,S050,Ganapathy,Coimbatore Stop 050,limited_stop,6.06,synthetic
+R054,10A,Town Hall - Coimbatore Stop 022,S003,S022,Town Hall,Coimbatore Stop 022,limited_stop,22.55,synthetic
+R055,31B,Saibaba Colony - Ganapathy,S007,S012,Saibaba Colony,Ganapathy,limited_stop,13.7,synthetic
+R056,16B,Singanallur - Coimbatore Stop 186,S004,S186,Singanallur,Coimbatore Stop 186,ordinary,15.27,synthetic
+R057,2C,Ganapathy - Coimbatore Stop 113,S012,S113,Ganapathy,Coimbatore Stop 113,express,19.13,synthetic
+R058,1,Ganapathy - Singanallur,S012,S004,Ganapathy,Singanallur,express,23.11,synthetic
+R059,60A,Gandhipuram - Coimbatore Stop 248,S001,S248,Gandhipuram,Coimbatore Stop 248,limited_stop,10.95,synthetic
+R060,7A,Ramanathapuram - Coimbatore Stop 065,S013,S065,Ramanathapuram,Coimbatore Stop 065,limited_stop,5.9,synthetic
+R061,16C,Hope College - Singanallur,S011,S004,Hope College,Singanallur,limited_stop,5.75,synthetic
+R062,1,Singanallur - Thudiyalur,S004,S018,Singanallur,Thudiyalur,ordinary,27.87,synthetic
+R063,45A,Ukkadam - Coimbatore Stop 229,S002,S229,Ukkadam,Coimbatore Stop 229,limited_stop,10.92,synthetic
+R064,1B,Gandhipuram - Hope College,S001,S011,Gandhipuram,Hope College,limited_stop,6.55,synthetic
+R065,20A,Singanallur - Coimbatore Stop 023,S004,S023,Singanallur,Coimbatore Stop 023,express,21.22,synthetic
+R066,3,Singanallur - Coimbatore Stop 114,S004,S114,Singanallur,Coimbatore Stop 114,express,13.71,synthetic
+R067,10,Airport - Town Hall,S010,S003,Airport,Town Hall,express,12.8,synthetic
+R068,5A,Ramanathapuram - Coimbatore Stop 059,S013,S059,Ramanathapuram,Coimbatore Stop 059,limited_stop,11.61,synthetic
+R069,2B,Peelamedu - Coimbatore Stop 180,S005,S180,Peelamedu,Coimbatore Stop 180,limited_stop,21.74,synthetic
+R070,70C,Hope College - Airport,S011,S010,Hope College,Airport,limited_stop,11.06,synthetic
+R071,45A,RS Puram - Coimbatore Stop 058,S006,S058,RS Puram,Coimbatore Stop 058,ordinary,18.69,synthetic
+R072,70A,Gandhipuram - Coimbatore Stop 235,S001,S235,Gandhipuram,Coimbatore Stop 235,ordinary,22.6,synthetic
+R073,12,Gandhipuram - Race Course,S001,S009,Gandhipuram,Race Course,ordinary,20.12,synthetic
+R074,45B,Gandhipuram - Coimbatore Stop 083,S001,S083,Gandhipuram,Coimbatore Stop 083,express,10.4,synthetic
+R075,60A,Saibaba Colony - Coimbatore Stop 232,S007,S232,Saibaba Colony,Coimbatore Stop 232,express,7.23,synthetic
+R076,3,Saibaba Colony - Town Hall,S007,S003,Saibaba Colony,Town Hall,express,17.13,synthetic
+R077,70,Ganapathy - Coimbatore Stop 168,S012,S168,Ganapathy,Coimbatore Stop 168,express,7.3,synthetic
+R078,5A,Gandhipuram - Coimbatore Stop 210,S001,S210,Gandhipuram,Coimbatore Stop 210,express,15.24,synthetic
+R079,10B,RS Puram - Hope College,S006,S011,RS Puram,Hope College,ordinary,5.73,synthetic
+R080,5,Singanallur - Coimbatore Stop 228,S004,S228,Singanallur,Coimbatore Stop 228,limited_stop,10.55,synthetic
+R081,5C,Singanallur - Coimbatore Stop 164,S004,S164,Singanallur,Coimbatore Stop 164,express,14.07,synthetic
+R082,7,Airport - Ganapathy,S010,S012,Airport,Ganapathy,express,8.53,synthetic
+R083,10C,Saibaba Colony - Coimbatore Stop 216,S007,S216,Saibaba Colony,Coimbatore Stop 216,limited_stop,15.77,synthetic
+R084,70B,Airport - Coimbatore Stop 057,S010,S057,Airport,Coimbatore Stop 057,ordinary,23.57,synthetic
+R085,2B,Ganapathy - Saibaba Colony,S012,S007,Ganapathy,Saibaba Colony,ordinary,21.25,synthetic
+R086,24B,Hope College - Coimbatore Stop 181,S011,S181,Hope College,Coimbatore Stop 181,ordinary,21.06,synthetic
+R087,2C,Ganapathy - Coimbatore Stop 201,S012,S201,Ganapathy,Coimbatore Stop 201,express,13.16,synthetic
+R088,45B,Singanallur - Ramanathapuram,S004,S013,Singanallur,Ramanathapuram,express,24.47,synthetic
+R089,24,Singanallur - Coimbatore Stop 156,S004,S156,Singanallur,Coimbatore Stop 156,express,17.85,synthetic
+R090,24A,Gandhipuram - Coimbatore Stop 115,S001,S115,Gandhipuram,Coimbatore Stop 115,express,24.01,synthetic
+R091,1C,Saibaba Colony - Singanallur,S007,S004,Saibaba Colony,Singanallur,ordinary,22.43,synthetic
+R092,20A,Race Course - Coimbatore Stop 223,S009,S223,Race Course,Coimbatore Stop 223,express,7.15,synthetic
+R093,12,Ukkadam - Coimbatore Stop 212,S002,S212,Ukkadam,Coimbatore Stop 212,limited_stop,6.32,synthetic
+R094,10B,Hope College - Ukkadam,S011,S002,Hope College,Ukkadam,limited_stop,10.63,synthetic
+R095,70,Saibaba Colony - Coimbatore Stop 165,S007,S165,Saibaba Colony,Coimbatore Stop 165,limited_stop,17.49,synthetic
+R096,7B,Singanallur - Coimbatore Stop 152,S004,S152,Singanallur,Coimbatore Stop 152,limited_stop,23.9,synthetic
+R097,12B,Singanallur - Peelamedu,S004,S005,Singanallur,Peelamedu,express,22.07,synthetic
+R098,45B,Peelamedu - Coimbatore Stop 240,S005,S240,Peelamedu,Coimbatore Stop 240,limited_stop,15.29,synthetic
+R099,3A,Hope College - Coimbatore Stop 068,S011,S068,Hope College,Coimbatore Stop 068,express,9.18,synthetic
+R100,31C,Town Hall - Ukkadam,S003,S002,Town Hall,Ukkadam,limited_stop,13.98,synthetic
